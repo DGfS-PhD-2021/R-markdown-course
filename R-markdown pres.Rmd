@@ -1,0 +1,47 @@
+---
+title: "R Markdown Course"
+output:
+  ioslides_presentation:
+    incremental: true
+    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+- R Markdown is a tool we use to create
+
+  - **efficient reports**
+  - **summarize analyses**
+  - **communicate results**
+
+
+- you can easily create
+
+  - **HTML** documents
+  - **PDF** documents
+  - **presentations** (such as this one!)
+
+- Most importantly, R Markdown ensures that the **results are reproducible**.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+

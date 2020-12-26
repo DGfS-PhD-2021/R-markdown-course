@@ -1,27 +1,21 @@
 ---
 title: "R Markdown Course"
 author: "Giulia Grisot"
-date: "`r format(Sys.time(), '%d %B %Y')`"
-output: html_document
+#date: "`r format(Sys.time(), '%d %B %Y')`"
+output: html_notebook
 ---
 
 1. Introduction to R Markdown
-Hi and welcome to the course. My name is Amy and, in this course, we'll learn how to create reports using R Markdown.
 
-2. R Markdown
-R Markdown is a tool we use to create efficient reports to summarize analyses and communicate results to an audience. We can create HTML and PDF documents with R Markdown using only R code. R Markdown is also a way to ensure that the results are reproducible, which is important to guarantee when creating reports.
+Hi and welcome to the first part of today's workshop. My name is Giulia and I will introduce you to R Markdown, and show you how to create reports and presentations with it.
 
-3. Reproducible results
-Consider the following scenario: you've conducted your analyses and created a presentation to demonstrate the findings.
+R Markdown is a tool we use to create *efficient reports* to *summarize analyses* and *communicate results* to an audience.
+With R Markdown, using only R code, you can create HTML and PDF documents. Most importantly, R Markdown ensures that the *results are reproducible*.
 
-4. Reproducible results
-You give the presentation to stakeholders, and they request some modifications.
-
-5. Reproducible results
-However, you can't remember each step you went through
-
-6. Reproducible results
-and aren't able to reproduce your work! By generating the results and report from code with R Markdown, you, and others, can always reproduce your results.
+Consider the following scenario:
+you've conducted your analyses and created a paper draft where you demonstrate your findings.
+You send the paper to a journal and the reviewers request some modifications.
+However, what if you can't remember each step you went through, or if in the meantime you updated your data files? If you  need to update manually all the numbers to match  and aren't able to reproduce your work! By generating the results and report from code with R Markdown, you, and others, *can always reproduce your results*.
 
 7. R Markdown elements
 An R Markdown document is made of three components: the code, the text of the report, and the metadata for the file.

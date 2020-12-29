@@ -1,7 +1,10 @@
 ---
-title: "R Markdown Course"
+title: "Introduction to R-Markdown"
+date: February 23, 2021
+author: Giulia Grisot (University of Basel)
 output:
   ioslides_presentation:
+    widescreen: true
     incremental: true
     
 ---
@@ -17,22 +20,14 @@ knitr::opts_chunk$set(echo = FALSE)
   - **efficient reports**
   - **summarize analyses**
   - **communicate results**
+    - crucially, R Markdown ensures that the **results are reproducible**.
 
-
-- you can easily create
+- it can easily produce
 
   - **HTML** documents
   - **PDF** documents
   - **presentations** (such as this one!)
-
-- Most importantly, R Markdown ensures that the **results are reproducible**.
-
-## Slide with Bullets
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
+  
 ## Slide with R Output
 
 ```{r cars, echo = TRUE}
@@ -41,7 +36,18 @@ summary(cars)
 
 ## Slide with Plot
 
-```{r pressure}
+```{r pressure, echo = TRUE}
 plot(pressure)
 ```
+
+
+## R Markdown elements
+
+- **Code**
+- **Text** of the report
+- **Metadata** for the file
+
+
+
+
 

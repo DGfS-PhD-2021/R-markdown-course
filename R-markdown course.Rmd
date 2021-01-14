@@ -7,20 +7,21 @@ output: html_notebook
 
 1. Introduction to R Markdown
 
-Hi and welcome to the first part of today's workshop. My name is Giulia and I will introduce you to R Markdown, and show you how to create reports and presentations with it.
+Hi and welcome to the first part of today's workshop. My name is Giulia and I will first introduce you to R Markdown, and then show you how to create reports, documents and presentations with it.
 
-R Markdown is a tool we use to create *efficient reports* to *summarize analyses* and *communicate results* to an audience.
+R Markdown is a tool we use to create *efficient reports*, to *summarize analyses* and *communicate results* to an audience.
 With R Markdown, using only R code, you can create HTML and PDF documents. Most importantly, R Markdown ensures that the *results are reproducible*.
 
 Consider the following scenario:
-you've conducted your analyses and created a paper draft where you demonstrate your findings.
-You send the paper to a journal and the reviewers request some modifications after a few months.
-However, what if you can't remember each step you went through, or if in the meantime you updated your data files?
-By generating the results and report from code with R Markdown, you, and others, *can always reproduce your results*.
+
+- You've conducted your analyses and created a paper draft where you demonstrate your findings.
+- You send the paper to a journal and the reviewers request some modifications after a few months.
+- However, by the time the reviewers get back to you, you can't remember exactly each step you went through, or if in the meantime you updated your data files. How are you going to do? 
+- By generating the results and report from code with R Markdown, you, and others, *can always reproduce your results, and easily update new data in the workflow*.
 
 2. R Markdown elements
 
-An R Markdown document is made of three components: the code, the text of the report, and the metadata for the file.
+An R Markdown document is made of three components: the *code*, the *text* of the report, and the *metadata* for the file.
 
 8. R Markdown file
 The YAML header containing the metadata appears at the top of the file, followed by the contents that make up the report, including the text and code in code chunks. YAML is a syntax for hierarchical data structures that is commonly used for configuration files.

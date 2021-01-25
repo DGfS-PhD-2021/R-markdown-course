@@ -1,5 +1,5 @@
 ---
-title: "R Markdown Course"
+title: "R Markdown Presentation Script"
 author: "Giulia Grisot"
 #date: "`r format(Sys.time(), '%d %B %Y')`"
 output: html_notebook
@@ -10,14 +10,16 @@ output: html_notebook
 Hi and welcome to the first part of today's workshop. My name is Giulia and I will first introduce you to R Markdown, and then show you how to create reports, documents and presentations with it.
 
 R Markdown is a tool we use to create *efficient reports*, to *summarize analyses* and *communicate results* to an audience.
-With R Markdown, using only R code, you can create HTML and PDF documents. Most importantly, R Markdown ensures that the *results are reproducible*.
+With R Markdown, using only R code, you can create several kinds of documents, including HTML and PDFs.
+Most importantly, R Markdown ensures that the *results are reproducible*.
 
 Consider the following scenario:
 
 - You've conducted your analyses and created a paper draft where you demonstrate your findings.
-- You send the paper to a journal and the reviewers request some modifications after a few months.
-- However, by the time the reviewers get back to you, you can't remember exactly each step you went through, or if in the meantime you updated your data files. How are you going to do? 
-- By generating the results and report from code with R Markdown, you, and others, *can always reproduce your results, and easily update new data in the workflow*.
+- Then you send the paper to a journal and, after a few months, the reviewers request some modifications 
+- However, let's imagine that, by then, you forgot the exact steps you went through to get to those early results, or that in the meantime you updated your data files. How are you going to do?
+
+- By generating the results and report from code with R Markdown, you *can always reproduce your results, and easily update new data in the workflow*. 
 
 2. R Markdown elements
 

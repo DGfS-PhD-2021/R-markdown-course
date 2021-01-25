@@ -1,16 +1,16 @@
 ---
-title: "Introduction to R-Markdown"
+title: "Data wrangling & reproducible reports with tidyverse and R-Markdown"
+subtitle: Introduction to R-Markdown
 date: February 23, 2021
-author: Giulia Grisot (University of Basel)
+author: Giulia Grisot, PhD <br> Digital Humanities Lab <br> University of Basel
 output:
-  ioslides_presentation:
-    widescreen: true
-    incremental: true
-    
+  xaringan::moon_reader:
+    css: ["default", "rladies", "rladies-fonts"]
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, fig.retina = 3, warning = FALSE, message = FALSE)
+
 ```
 
 ## R Markdown
@@ -20,7 +20,6 @@ knitr::opts_chunk$set(echo = FALSE)
   - **efficient reports**
   - **summarize analyses**
   - **communicate results**
-    - crucially, R Markdown ensures that the **results are reproducible**.
 
 - it can easily produce
 
@@ -28,11 +27,36 @@ knitr::opts_chunk$set(echo = FALSE)
   - **PDF** documents
   - **presentations** (such as this one!)
   
-## Slide with R Output
+- R Markdown ensures that the **results are reproducible**.
 
-```{r cars, echo = TRUE}
-summary(cars)
+---
+
+
+.pull-left[
+  ![](images/image_1.jpg)
+  ![](images/image_2.png)
+  ]
+  
+.pull-right[
+
+![](images/image_3.jpg)
+
+]
+
+---
+
+.center[![](images/why.gif)]
+
+
+---
+
+
+## With R markdown results are always reproducible
+
+```{r, echo=F}
 ```
+
+---
 
 ## Slide with Plot
 

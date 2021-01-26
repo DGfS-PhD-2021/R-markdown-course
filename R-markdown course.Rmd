@@ -26,16 +26,24 @@ Consider the following scenario:
 An R Markdown document is made of three components: the *code*, the *text* of the report, and the *metadata* for the file.
 
 8. R Markdown file
-The YAML header containing the metadata appears at the top of the file, followed by the contents that make up the report, including the text and code in code chunks. YAML is a syntax for hierarchical data structures that is commonly used for configuration files.
+
+At the top of the file, you can see the YAML header, containing the file metadata. It is followed by the contents that make up the report, which include the code chunks and the text. In this session, we will not focus on the YAML, and we will use a basic syntax that accommodates simple reports. If you want to personalize your YAML more, several tutorials can be found online. I will provide a few links at the end of the session.
 
 9. Knit
-When we finish modifying a file and are ready to see the report, we'll need to knit it. Knitting a file is how we generate an output file from the R markdown file. When a file is knit, R Markdown runs the chunks of R code contained in the file and combines them with the text in the document into an HTML file. For example, when the R Markdown file shown on the left is knit, it will create the output shown on the right. We'll learn more about output types later in the chapter.
+
+After we have finished modifying a file, we might want to see it in a more legible form, which can be shared with others. Knitting a file is how we generate an output file from the R markdown file.
+
+When a file is knit, R Markdown transforms the document into the desired output file, reading the text and running the chucks of code.
+
+For example, when the R Markdown file shown on the left is knit, it will create the output shown on the right. We'll learn more about output types later in the chapter.
 
 10. Course overview
-In this course, we'll cover the various elements that make up an R markdown document. Then, we'll learn how to add plots and analyses to a report, organize and improve a report, and customize a report by specifying fonts and colors that reflect a brand.
+
+In this course, we'll have a look at the various elements that make up an R markdown document. Then, we'll learn how to add plots and analyses to a report, organize and improve a report, and customize a report by specifying fonts and colors.
 
 11. Investment annual summary
-Throughout the course, we'll build a report using real-world datasets from the World Bank International Finance Corporation or IFC. The first dataset, investment annual summary, provides a summary of the dollars in millions provided to each region for each fiscal year, from 2012 to 2018.
+
+Throughout the course, we'll build a report using an open source dataset of Student Exams Performance from Keggle. This contains the results of .
 
 12. Investment services projects
 The second dataset, investment services projects, displays more specific information about each investment project from the 2012 to 2018 fiscal years. Note that the fiscal year starts on July 1st of the previous year and ends on June 30th of the year of interest. Information listed includes the project name, company name, sector, project status, and investment amounts.

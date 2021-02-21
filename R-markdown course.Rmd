@@ -5,6 +5,8 @@ author: "Giulia Grisot"
 output: html_notebook
 ---
 
+https://www.markdownguide.org/basic-syntax
+
 # Introduction to R Markdown
 
 Hi and welcome to the first part of today's workshop. My name is Giulia and I will introduce you to R Markdown. I will then show you how to create reports, documents and presentations with it.

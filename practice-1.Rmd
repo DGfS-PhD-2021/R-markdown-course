@@ -1,0 +1,261 @@
+
+
+
+
+
+
+<!-- 
+
+CUSTOMISE YOUR YAML
+
+
+It's your turn!
+
+Look at the top of the window, do you see the Knit button? try and click on it.
+It gave you an error, right? Don't worry, that's supposed to happen. It is because this file does not yet have a YAML, which means R Studio does not really know what to do with it.
+
+Exercise:
+
+Try and create the header above from scratch. Remember to enclose it between two sets of "---" (no spaces between the three), and to include the fields `title` `date` `author`, followed respectively by a column sign, and by your input data (i.e. the title, your name, the date).
+Don't forget the most important field: the `output`. For now, use "html_document" as the output format.
+
+Ok, know knit again.
+
+Did it work now? Well done!
+
+-------------------------------
+
+THE DATE
+
+Now that you have a nice title and your name on the report, you might want to change the way the date is displayed. Of course you can add in manually as text, especially if you want it to remain the same. However, if you want it to reflect the date in which you have modified the document, you might want to use your System date.
+
+In this case, use the code "`r format(Sys.Date(), '%d %B %Y')`" instead. You can change the order of d, B and Y, that indicate respectively day, month and year, or even add commas between them.
+
+Also note how this green text is formatted between arrows. This indicates that whatever text is contained here will not be printed in our output. This way you can take notes also in the text sections (within code chunks, you can add comments by adding a "#" sign before the text.)
+
+-----------------------------
+
+THE MAIN BODY: TEXT AND CODE
+
+
+Don't worry about the chunk of code below. It can define the knitting properties.
+Leave it as it is for now: we will not discuss it in depth. It is however important to understand that it defines the "rules" for your rmarkdown output.
+In the chunk content, `echo = FALSE` is an parameter of the knit function that tells your markdown document to avoid printing of the R code that generates outputs for all the chunks in your document. The `message = FALSE` prevents the printing of messages related to the chunks' content.
+Notice also that it says "include=FALSE" in the chunk description inside the { }, which means you will not see this specific chunk when you knit the file, even though it will be excecuted.
+
+You can try and change them later on and see what happens!
+-->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=F)
+```
+
+
+
+<!--
+
+THE TEXT
+
+Here we go! this might be the beginning of your report. As mentioned in the introductory presentation, you can organize your content hierarchically, simply using "#" sing. (yes, this same sign creates headings in the TEXT sections, and comments in the code chunks)
+
+for instance:
+
+# This would be your Heading 1
+## This would be your Heading 2
+### This would be your Heading 3
+#### This would be your Heading 4
+##### This would be your Heading 5
+
+and so on.
+
+If you want your sections to show numbers, you have to add this information to the YAML the following:
+
+number_sections: true
+
+However, as I mentioned before, be aware of the YAML format. In order for it to work, this is how it needs to look.
+
+output:
+  html_document:
+    number_sections: true
+
+
+Exercise:
+
+Now try to insert a Heading (##) between this block of instructions and the next, as well as a short description. Then knit again and see what happens. Nice, right?
+
+-->
+
+
+
+
+
+
+
+<!--
+
+BLOCKQUOTES
+
+If you need to call special attention to a quote from another source, or design a pull quote for a magazine article, then Markdown's blockquote syntax will be useful. A blockquote is a sentence or paragraph that's been specially formatted to draw attention to the reader.
+
+To create a block quote, all you have to do is preface a line with the "greater than" caret (>). For example:
+
+> "In a few moments he was barefoot, his stockings folded in his pockets and his canvas shoes dangling by their knotted laces over his shoulders and, picking a pointed salt-eaten stick out of the jetsam among the rocks, he clambered down the slope of the breakwater."
+
+You can increase the level of the quote by increasing the number of > symbols.
+
+Exercise:
+
+Add below a quote you like that will suit the beginning of your report and format it as a blockquote.
+By inserting it below, it should naturally be printed after the description you wrote before.
+
+-->
+
+
+
+
+
+
+
+<!--
+
+IMAGES
+
+There might be times when you simply want to insert an image in your report.
+To do that, you just have to remember the structure ![]()
+
+The square bracket contains your description for the image, and the parenthesis the link to either a local image (in which case you have to have it somewhere in your computer) or to an image online.
+
+One more thing you might be wondering "how do I tell RStudio to center the image in the page?"
+There are two ways to achieve this:
+
+Markdown basic syntax: 
+
+- central alignment = enclose the whole image code between <center> and </center> 
+
+  i.e. <center>
+       ![your caption](your link)
+       </center>
+
+- right and left alignment = enclose the whole image code between
+  <p align='right'> or <p align='left'> and </p>
+  
+  i.e. <p align='right'>
+       ![your caption](your link)
+       </p>
+
+To specify the size of your image, you can add a {} right after the (image link)
+  
+  ![your caption](your link){width=800}
+
+
+Exercise:
+
+As an extra funky opening for your report, also include an image that will go just after your blockquote.
+It's up to you whether you want to use an online image or one that is on your local device. (It can also be a gif!)
+
+Try and play around with page alignment and sizes to see what you like best.
+
+-->
+
+
+
+
+
+
+
+
+<!--
+
+THE CODE
+
+When creating your own reports, one of the first things you'll want to do is add some code!
+You can add a code chuck manually by typing three ` signs followed by the type of code chunk you want, {r}. If you do it manually, remember to close your code chunk, again with three `.
+Alternatively, on the top of this window, you should see a green button with a C and a little arrow. When you click on it, it will show you the different kind of code you can work with in your report. Select the code chunk you'd like and you're good to go. 
+
+In the presentation I mentioned the Student annual rerport dataset.
+Let's take a look at it.
+
+The chunk of code below is already set up for you. Take a look at it and follow the instructions
+
+-->
+
+```{r load dataset}
+
+# At the beginning of a chunk, you will often see "library(xxxxxx)". It indicates that a package has been loaded. Different packages perform different operations. For example, the package "readr" allows R to read the CSV file into a dataframe.
+
+# We want to call this dataframe "students_performance". 
+
+# Exercise:
+
+# Uncomment the code below and insert the name of the dataframe in the spaces demarcated with XXXX.
+# You can run the code chunk to see if it works and have a look at the output without knitting the whole document. Once you have added the dataframe name to the code, click on the little green arrow on the top right of the code block, try and see what happens. 
+
+
+# library(readr)
+
+# XXXXXXXXX <- read_csv("rmarkdown_intro_data/StudentsPerformance.csv")
+
+# head(XXXXXXXXX)
+
+```
+
+
+<!-- 
+
+Now you should see a dataframe in your Environment. Click on it to visualize it entirely, or write `View(students_performance)` in the console.
+
+
+-------------------------------
+
+INCLUDING PLOTS
+
+One important feature of RMarkdown is how easily you can embed plots in your report.
+
+The code to create a plot is ready for you in the chunk below (you will learn more about tidyverse later today) but it is missing the variables to be plotted.
+
+Before you move on, note that near the "r" at the top of your chunk indicating the code type, you can add 
+- a name for the chunk (this can be useful to move quickly between chunks by clicking at the bottom left button of this widows, which should feature the heading of your choice)
+- the parameters for the chunk:
+    - whether you want it to be executed (eval=)
+    - whether you want it to be included or excluded in the final output (include=)
+    - whether you want it to be printed it or you only want the code output (echo=)
+    - whether you want the messages or warnings related to the code (message=  , warning=)
+
+Try and play around with these!
+
+Exercise:
+
+1) Uncomment the code
+
+2) insert a heading before the code chunk and write down a short summary of what it shows just before the plot. also remember to name the chunk. Knit and see how it looks.
+
+3) create another chunk after this one, and use the same formula to create a plot with different variables. (have a look at the dataframe for inspiration). Also here, write down a short description of it before or afterwards, and try to include one word in bold, one in italics and a direct reference to the dataframe (do you remember how?).
+
+
+
+ps. if you are using Windows, you can comment and uncomment by selecting and pressing Ctrl+Shift+C
+There should be a similar shortcut for Mac. You can find all the shortcuts in Tools > Keyboard Shortcut Help
+
+-->
+
+
+
+```{r plot 1, echo=FALSE}
+# 
+#  library(tidyverse)
+# 
+#  students_performance %>%
+#    ggplot2::ggplot(aes(gender, math_score, fill=gender)) +
+#    geom_boxplot() 
+
+```
+
+
+
+
+<!-- Good work!
+Now go back to the video: we'll discuss problems and after a short break you'll see how to make tables and manage references.
+-->
+
+
+
+Ok, now you are ready for the 

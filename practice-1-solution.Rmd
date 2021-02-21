@@ -1,0 +1,186 @@
+---
+title: "Practice 1"
+author: Giulia Grisot
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+output:
+  html_document:
+    number_sections: true
+---
+
+
+<!--
+
+Don't worry about the chunk of code below. It can define the knitting properties.
+Leave it as it is for now: we will not discuss it in depth.
+Notice however that it says "include=FALSE" in the description, which means you will not see that chunk when you knit the file, In the chunk content, `echo = FALSE` is an parameter of the knit function that tells your markdown document to avoid printing of the R code that generates outputs for all the chunks in your document. The `message = FALSE` prevents the printing of messages related to the chunks' content.
+You can try and change them later on and see what happens!
+
+-->
+
+```{r setup, include=FALSE}
+# 
+knitr::opts_chunk$set(echo = FALSE, message=F)
+```
+
+
+<!-- 
+
+Remember: We want to create a report to show to an audience whether gender, ethnic group and parental education have an effect on how the students perform in several subjects, and how these factors correlate.
+
+
+
+CUSTOMISE YOUR YAML
+
+
+It's your turn!
+
+Look above, do you see the Knit button? try and click on it.
+It gave you an error, right? Don't worry, that's supposed to happen. It is because this file does not yet have a YAML, which means R Studio does not really know what to do with it.
+
+Exercise:
+
+Try and create the header above from scratch. Remember to enclose it between two sets of "---", and to include the fields `title` `date` `author`, followed respectively by a column sign, and by your input data. Don't forget the most important field: the `output`. For now, use "html_document" as the output format.
+
+Did it work now? well done!
+
+-------------------------------
+
+
+THE DATE
+
+Now that you have a nice title and your name on the report, you might want to change the way the date is displayed. Of course you can add in manually as text, especially if you want it to remain the same. However, if you want it to reflect the date in which you have modified the document, you might want to use your System date.
+
+In this case, use the code "`r format(Sys.Date(), '%d %B %Y')`" instead. You can change the order of d, B and Y, that indicate respectively day, month and year, or even add commas between them.
+
+Also note how this green text is formatted between arrows. This indicates that whatever text is contained here will not be printed in our output. This way you can take notes also in the text sections (within code chunks, you can add comments by adding a "#" sign before the text.)
+
+-------------------------
+
+THE TEXT
+
+Here we go! this might be the beginning of your report. As mentioned in the introductory presentation, you can organize your content hierarchically, simply using "#" sing. (yes, this same sign creates headings in the TEXT sections, and comments in the code chunks)
+
+for instance:
+
+# This would be your Heading 1
+## This would be your Heading 2
+### This would be your Heading 3
+#### This would be your Heading 4
+##### This would be your Heading 5
+
+and so on.
+
+If you want your sections to show numbers, you have to add this information to the YAML the following:
+
+number_sections: true
+
+However, as I mentioned before, be aware of the YAML format. In order for it to work, this is how it needs to look.
+
+output:
+  html_document:
+    number_sections: true
+
+
+Exercise:
+
+Now try to insert a title below, between this block of instructions and the next, as well as a subtitle and a short description. Then knit again and see what happens. Nice, right?
+
+-->
+
+
+
+
+
+
+<!--
+
+THE CODE
+
+When creating your own reports, one of the first things you'll want to do is add some code!
+You can add a code chuck manually by typing three ` signs followed by the type of code chunk you want, {r}. If you do it manually, remember to close your code chunk, again with three `.
+Alternatively, on the top of this window, you should see a green button with a C and a little arrow. When you click on it, it will show you the different kind of code you can work with in your report. Select the code chunk you'd like and you're good to go. 
+
+In the presentation I mentioned the Student annual rerport dataset.
+Let's take a look at it.
+
+The chunk of code below is already set up for you. Take a look at it and follow the instructions
+
+-->
+
+```{r load dataset}
+
+# At the beginning of a chunk, you will often see "library(xxxxxx)". It indicates that a package has been loaded. Different packages perform different operations. For example, the package "readr" allows R to read the CSV file into a dataframe.
+
+# We want to call this dataframe "students_performance". 
+
+# exercise:
+
+# Uncomment the code and insert the name of the dataframe in the space demarcated with XXXX.
+# You can run the code chunk to see if it works and have a look at the output without knitting the whole document. Click on the little green arrow on the top right of the code block, try and see what happens. 
+
+
+# library(readr)
+
+# XXXXXXXXX <- read_csv("rmarkdown_intro_data/StudentsPerformance.csv")
+
+# head(XXXXXXXXX)
+
+```
+
+
+<!-- 
+
+Now you should see a dataframe in your Environment. Click on it to visualize it entirely, or write `View(students_performance)` in the console.
+
+
+# Including Plots
+
+One important feature of RMarkdown is how easily you can embed plots in your report.
+
+The code to create a plot is ready for you in the chunk below (you will learn more about tidyverse later today) but it is missing the variables to be plotted.
+
+
+Exercise:
+
+1) Uncomment the code
+2) inset a title before the code chunk and write down a short summary of what it shows just before the plot.
+3) create another chunk after this one, and use the same formula to create a plot with different variables. (have a look at the dataframe for inspiration). Also here, write down a short description of it, and try to include one word in bold, one in italics and a direct reference to the dataframe (do you remember how?).
+
+
+ps. if you are using Windows, you can comment and uncomment by selecting and pressing Ctrl+Shift+C
+There should be a similar shortcut for Mac. You can find all the shortcuts in Tools > Keyboard Shortcut Help
+
+-->
+
+
+
+```{r pressure, echo=FALSE}
+# 
+#  library(tidyverse)
+# 
+#  students_performance %>%
+#    ggplot2::ggplot(aes(gender, math_score, fill=gender)) +
+#    geom_boxplot() 
+
+```
+
+
+
+
+
+
+
+
+
+<!-- All done? Great :) 
+
+
+
+
+
+
+-->
+
+
+
+

@@ -5,9 +5,9 @@ author: "Giulia Grisot"
 output: html_notebook
 ---
 
-1. Introduction to R Markdown
+# Introduction to R Markdown
 
-Hi and welcome to the first part of today's workshop. My name is Giulia and I will first introduce you to R Markdown, and then show you how to create reports, documents and presentations with it.
+Hi and welcome to the first part of today's workshop. My name is Giulia and I will introduce you to R Markdown. I will then show you how to create reports, documents and presentations with it.
 
 R Markdown is a tool we use to create *efficient reports*, to *summarize analyses* and *communicate results* to an audience.
 With R Markdown, using only R code, you can create several kinds of documents, including HTML and PDFs.
@@ -17,19 +17,28 @@ Consider the following scenario:
 
 - You've conducted your analyses and created a paper draft where you demonstrate your findings.
 - Then you send the paper to a journal and, after a few months, the reviewers request some modifications 
-- However, let's imagine that, by then, you forgot the exact steps you went through to get to those early results, or that in the meantime you updated your data files. How are you going to do?
+- However, let's imagine that, by then, you have forgotten the exact sequence of steps you went through to get to those first results, or that in the meantime you updated your data files. How are you going to do?
 
-- By generating the results and report from code with R Markdown, you *can always reproduce your results, and easily update new data in the workflow*. 
+- By generating the results and report directly from code with R Markdown, you *can always reproduce your results, and easily update new data in the workflow*. 
 
-2. R Markdown elements
+## R Markdown elements
 
-An R Markdown document is made of three components: the *code*, the *text* of the report, and the *metadata* for the file.
+An R Markdown document is made of three components: *metadata*, *text* and, if you need it, *code*.
+R Markdown is especially indicated if you are dealing with datasets and plots, but you can also use it as a "zero fuss" alternative to word processors, which you might think of as having a "friendlier" interface, but also often oblige you to waste quite a lot of time on the format adjustments.
+With R Markdown, once you define the "rules" you just have to decide how you want to organise the hierarchies within your paper, and the output will come perfectly formatted.
 
-8. R Markdown file
+### YAML
 
-At the top of the file, you can see the YAML header, containing the file metadata. It is followed by the contents that make up the report, which include the code chunks and the text. In this session, we will not focus on the YAML, and we will use a basic syntax that accommodates simple reports. If you want to personalize your YAML more, several tutorials can be found online. I will provide a few links at the end of the session.
+At the top of the file, you can see the *YAML header*, containing the file metadata. It is enclosed between two strings of made of three hashes each.
+The YAML determined the properties of your markdown output, and depending on your desired format, you can add numerous features to your document, such as weather you want a table of content, whether you want to link the paper to a bib file to add references automatically, and so on.
+In this session, we will not focus on the YAML, and we will use a basic syntax that accommodates simple reports. If you want to personalize your YAML more, several tutorials can be found online. I will provide a few links at the end of the session.
+One thing that you need to know, however, is that the YAML is sensitive to spaces, tabs and double quotes. Whenever you decide to add some features, pay attention to how these are structured within the YAML.
 
-9. Knit
+## Text body
+
+The YAML is followed by the contents that make up your report, the actual body of your document. This can includes both text and code chunks.
+
+## Knit
 
 After we have finished modifying a file, we might want to see it in a more legible form, which can be shared with others. Knitting a file is how we generate an output file from the R markdown file.
 
@@ -37,18 +46,19 @@ When a file is knit, R Markdown transforms the document into the desired output 
 
 For example, when the R Markdown file shown on the left is knit, it will create the output shown on the right. We'll learn more about output types later in the chapter.
 
-10. Course overview
+# Course overview
 
-In this course, we'll have a look at the various elements that make up an R markdown document. Then, we'll learn how to add plots and analyses to a report, organize and improve a report, and customize a report by specifying fonts and colors.
+In this course, we'll have a look at the various elements that make up an R markdown document. Then, we'll learn how to add plots and analyses to a report, organize and improve a report, and customize it bz changing the theme.
 
-11. Investment annual summary
+## Student performance report
 
-Throughout the course, we'll build a report using an open source dataset of Student Exams Performance from Keggle. This contains the results of .
+Throughout the course, we'll build a report using an open source dataset of Student Exams Performance from Keggle. This contains 1000 exam score results by students of different genders, from different ethnical groups and whose parents have different level of education.
 
-12. Investment services projects
-The second dataset, investment services projects, displays more specific information about each investment project from the 2012 to 2018 fiscal years. Note that the fiscal year starts on July 1st of the previous year and ends on June 30th of the year of interest. Information listed includes the project name, company name, sector, project status, and investment amounts.
+For instance, we might want to see whether gender, ethnical group and parental education have an effect on how the students perform in several subjects.
 
-13. Code chunks
+
+
+
 To get started, we'll add some code by adding a code chunk. A code chunk is a section that contains the code that will either render output in the report or display the code itself as part of the report. Chunks are what separate the text of the report from the code.
 
 14. Adding code chunks

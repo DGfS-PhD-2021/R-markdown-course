@@ -5,8 +5,6 @@ author: "Giulia Grisot"
 output: html_notebook
 ---
 
-https://www.markdownguide.org/basic-syntax
-
 # Introduction to R Markdown
 
 Hi and welcome to the first part of today's workshop. My name is Giulia and I will introduce you to R Markdown. I will then show you how to create reports, documents and presentations with it.
@@ -57,42 +55,6 @@ In this course, we'll have a look at the various elements that make up an R mark
 Throughout the course, we'll build a report using an open source dataset of Student Exams Performance from Keggle. This contains 1000 exam score results by students of different genders, from different ethnical groups and whose parents have different level of education.
 
 For instance, we might want to see whether gender, ethnical group and parental education have an effect on how the students perform in several subjects.
-
-
-
-
-To get started, we'll add some code by adding a code chunk. A code chunk is a section that contains the code that will either render output in the report or display the code itself as part of the report. Chunks are what separate the text of the report from the code.
-
-14. Adding code chunks
-Code chunks start and end
-
-15. Adding code chunks
-with a set of three backticks. The first set of backticks signify the beginning of the code chunk
-
-16. Adding code chunks
-and are followed by curly braces that include the letter r, to specify that we are adding r code. Within the curly braces, we can specify a number of other chunk options. We'll be discussing the details of this later in the course.
-
-17. Adding code chunks
-In the code chunk shown, we've specified the investment annual summary dataset name in the code chunk. When we knit the file,
-
-18. Adding code chunks
-we see the dataset included in the document.
-
-19. Let's practice!
-
-Creating your first R Markdown file
-
-Throughout the course, you'll be working on creating an investment report using two datasets from the World Bank IFC. The first dataset, investment_annual_summary, provides the summary of the dollars in millions provided to each region for each fiscal year, from 2012 to 2018. To get started on your report, you first want to print out the dataset.
-
-To create your report, you'll need to edit the Markdown file shown on the right as described in the instructions, then press the green "Knit HTML" button to knit the file and see the resulting HTML file. We'll discuss other output types later in the course.
-
-In each exercise, the first code chunk in the Markdown file will load the readr package and the datasets you'll be using in the exercise. You'll learn more about the details of this code chunk later in the course, but you won't need to modify it for any of the exercises in this chapter.Creating your first R Markdown file
-
-Throughout the course, you'll be working on creating an investment report using two datasets from the World Bank IFC. The first dataset, investment_annual_summary, provides the summary of the dollars in millions provided to each region for each fiscal year, from 2012 to 2018. To get started on your report, you first want to print out the dataset.
-
-To create your report, you'll need to edit the Markdown file shown on the right as described in the instructions, then press the green "Knit HTML" button to knit the file and see the resulting HTML file. We'll discuss other output types later in the course.
-
-In each exercise, the first code chunk in the Markdown file will load the readr package and the datasets you'll be using in the exercise. You'll learn more about the details of this code chunk later in the course, but you won't need to modify it for any of the exercises in this chapter.
 
 
 

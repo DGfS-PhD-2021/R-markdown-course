@@ -1,13 +1,17 @@
 ---
-title: R Markdown introduction
-author: Giulia Grisot
+title: "R Markdown introduction"
+author: "Giulia Grisot"
 date: "`r format(Sys.Date(), '%d %B %Y')`"
 output:
+  word_document:
+    toc: yes
   html_document:
     toc: yes
     toc_float: yes
-    number_sections: false
+    number_sections: no
     theme: flatly
+  pdf_document:
+    toc: yes
 bibliography: my_references.bib
 link-citations: yes
 ---

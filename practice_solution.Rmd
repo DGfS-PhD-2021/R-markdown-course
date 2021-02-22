@@ -1,10 +1,16 @@
-
-
-
-
-
-
-
+---
+title: R Markdown introduction
+author: Giulia Grisot
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    number_sections: false
+    theme: flatly
+bibliography: my_references.bib
+link-citations: yes
+---
 
 <!--
 
@@ -86,9 +92,9 @@ Now try to insert a Heading (##) between this block of instructions and the next
 
 -->
 
+# Heading
 
-
-
+This is going to be a report about student perfromance.
 
 
 
@@ -112,7 +118,7 @@ By inserting it below, it should naturally be printed after the description you 
 -->
 
 
-
+> The man who does not read books has no advantage over the one who cannot read them. — Mark Twain
 
 
 
@@ -158,12 +164,12 @@ Try and play around with page alignment and sizes to see what you like best.
 
 -->
 
+<center>
+
+![she knows](image_sample.jpeg){width=800}
 
 
-
-
-
-
+</center>
 
 <!--
 
@@ -188,14 +194,13 @@ The chunk of code below is already set up for you. Take a look at it and follow 
 
 # Exercise:
 
-# Uncomment the code below and insert the name of the dataframe in the space demarcated with XXXX.
+# Uncomment the code below and insert the name of the dataframe in the spaces demarcated with XXXX.
 # You can run the code chunk to see if it works and have a look at the output without knitting the whole document. Once you have added the dataframe name to the code, click on the little green arrow on the top right of the code block, try and see what happens. 
 
+library(knitr)
+library(readr)
 
-# library(readr)
-
-# XXXX <- read_csv("rmarkdown_intro_data/StudentsPerformance.csv")
-
+students_performance <- read_csv("rmarkdown_intro_data/StudentsPerformance.csv")
 
 ```
 
@@ -238,20 +243,29 @@ There should be a similar shortcut for Mac. You can find all the shortcuts in To
 
 -->
 
-
+Male students seem to get higher math scores tha female students.
 
 ```{r plot 1, echo=FALSE}
-# 
-# library(tidyverse)
-# library(ggplot2)
-# 
-# students_performance %>%
-#   ggplot2::ggplot(aes(gender, math_score, fill=gender)) +
-#   geom_boxplot() 
+
+library(tidyverse)
+library(ggplot2)
+
+students_performance %>%
+   ggplot2::ggplot(aes(gender, math_score, fill=gender)) +
+   geom_boxplot()
 
 ```
 
+```{r plot 2, echo=FALSE}
 
+ library(tidyverse)
+
+ students_performance %>%
+   ggplot2::ggplot(aes(gender, reading_score, fill=gender)) +
+   geom_boxplot()
+
+```
+However, female appear to have higher scores in reading. This seems to support preconceptions about male students typically being educated to choose **scientific subject**, as opposed to female being often directed towards the study of humanities. Hopefully this might change, with educational systems empowering *women in science.*
 
 
 <!-- Good work!
@@ -328,15 +342,18 @@ Create a table manually after the instructions and see if it matches.
 
 
 ```{r}
-# library(tidyverse)
-# 
-# students_perf_table <- students_performance %>%
-#   group_by(gender) %>%
-#   summarise(math_mean = mean(math_score), read_mean = mean(reading_score))
+library(tidyverse)
+
+students_perf_table <- students_performance %>%
+  group_by(gender) %>%
+  summarise(math_mean = mean(math_score), read_mean = mean(reading_score))
 
 ```
 
-
+gender  |  math_mean |  read_mean
+------- | ---------- | ----------
+female  |   63.63320 |   72.60811
+male    |   68.72822 |   65.47303
 
 
 
@@ -356,10 +373,10 @@ Knit and see what happens.
 
 
 ```{r}
-# library(knitr)
-# 
-# 
-# kable(THE_DATA_YOU_WANT_TO_TRANSFORM, col.names = c("XXXXX", "XXXXX", "XXXXX"), caption = "XXXXXXXXXX")
+library(knitr)
+
+
+kable(students_perf_table, col.names = c("Gender", "Math score", "Reading score"), caption = "Average  amth and reading score by gender")
 
 ```
 
@@ -448,33 +465,9 @@ Bummer, right?
 
 Well, it is really easy to make her happy.
 
-
-Exercise:
-
 Just try and add the "word_document" output above "html_document" (at the same indentation).
 Remember, if you want a table of content you can add a colon right after word_document, make a new line, indent one more level, and add toc:yes
 and the same goes for the section number, number_sections: false
-
-
-
-
-Exercise:
-
-Do the same with "pdf_document" and see what happens.
-
-
-
-
-
-
-
-Well done!
-That's it for the introductory course, I hope you learned something new.
-
-I hope you put down all the questions you have for me.
-Come back to the video call and let's talk about them.
-
-
 
 -->
 

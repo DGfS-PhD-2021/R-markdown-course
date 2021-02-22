@@ -258,4 +258,56 @@ Now go back to the video: we'll discuss problems and after a short break you'll 
 
 
 
-Ok, now you are ready for the 
+<!-- Ok, now you are ready for the second practice session. -->
+
+
+<!-- MANUAL TABLES -->
+
+<!-- As you have seen, you can easily create tables in markdown. One way to do this is to input it manually, using Markdown syntax. This allows you to create a table indipendently of what is or is not in your environment. -->
+<!-- Also, you don't need code to insert a markdown table. -->
+
+<!-- Markdown tables are physically represented using dash - to separate the header row from the content ones, -->
+<!-- and pipe | to separate columns. -->
+
+<!-- heading col 1 | heading col 2 -->
+<!-- ------------- | ------------- -->
+<!-- Cell          |  Cell   -->
+
+
+<!-- You can  populate a table in any way you want - -->
+
+<!-- Letter | Digit | Character -->
+<!-- ------ | ------|---------- -->
+<!-- a      | 4     | $ -->
+<!--        | 365   | ( -->
+<!-- b      |       | ^   -->
+
+<!-- Markdown ignores spacing. The same table could be written like this: -->
+
+<!-- Letter|Digit|Character -->
+<!-- ---|---|--- -->
+<!-- a|4|$ -->
+<!--  |365|( -->
+<!-- b| |^   -->
+
+<!-- and still display the same: -->
+
+<!-- NOTE: if you need a void column you must add a space between the pipes -->
+
+
+
+<!-- As you can see, the code of the table does not need to represent the spacing of the table - that is accomplished within the markdown. -->
+
+<!-- If you want to align the content of a table, you just have to use the : sign in the separator between the heading and the cell contents as follows: -->
+
+
+<!-- Column | Column | Column -->
+<!-- :----- | :----: | -----: -->
+<!-- Left   | Center | Right -->
+<!-- align  | align  | align -->
+
+
+
+
+either inputting them manually, or 
+

@@ -1,17 +1,14 @@
 ---
 title: "R Markdown introduction"
 author: "Giulia Grisot"
-date: "`r format(Sys.Date(), '%d %B %Y')`"
+# ahshshs
+date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
-  word_document:
-    toc: yes
   html_document:
     toc: yes
     toc_float: yes
     number_sections: no
     theme: flatly
-  pdf_document:
-    toc: yes
 bibliography: my_references.bib
 link-citations: yes
 ---
@@ -97,6 +94,8 @@ Now try to insert a Heading (##) between this block of instructions and the next
 -->
 
 # Heading
+## subheading
+### blablabla
 
 This is going to be a report about student perfromance.
 
@@ -358,7 +357,7 @@ gender  |  math_mean |  read_mean
 ------- | ---------- | ----------
 female  |   63.63320 |   72.60811
 male    |   68.72822 |   65.47303
-
+Table: table 1
 
 
 <!--
@@ -380,7 +379,9 @@ Knit and see what happens.
 library(knitr)
 
 
-kable(students_perf_table, col.names = c("Gender", "Math score", "Reading score"), caption = "Average  amth and reading score by gender")
+kable(students_perf_table,
+      col.names = c("Gender", "Math score", "Reading score"),
+      caption = "Average  amth and reading score by gender")
 
 ```
 
